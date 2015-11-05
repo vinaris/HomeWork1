@@ -16,7 +16,6 @@ namespace Model
             Age = age;
             _health = 5;
             Color = color;
-            CurrentColor = color.HeathyColor;
         }
 
         public string Name
@@ -45,12 +44,12 @@ namespace Model
             _health--;
         }
 
-        public string CurrentColor { get; set; }
-
-        public void SetCurrentColor()
+        public string CurrentColor
         {
-            CurrentColor = _health < 5 ? Color.SickColor : Color.HeathyColor;
+            get
+            {
+                return _health < 5 ? Color.SickColor : Color.HeathyColor;
+            }
         }
-
     }
 }

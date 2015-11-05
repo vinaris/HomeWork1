@@ -34,17 +34,14 @@ namespace ConsoleApplication1
                         cat.Color.HeathyColor = Console.ReadLine();
                         Console.Write("Введите цвет больной кошки: ");
                         cat.Color.SickColor = Console.ReadLine();
-                        cat.SetCurrentColor();
                         break;
 
                     case "3":
                         cat.Punish();
-                        cat.SetCurrentColor();
                         break;
 
                     case "4":
                         cat.Feed();
-                        cat.SetCurrentColor();
                         break;
 
                     case "5":
